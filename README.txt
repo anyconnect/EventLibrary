@@ -1,4 +1,4 @@
-The AnyConnect Event Library creates a junction between AnyConnect's Smarter Camera Platform Libraries and your smarter camera’s event library.
+The AnyConnect Event Library creates a junction between AnyConnect's Smarter Camera Platform Libraries and your smarter camera’s sensor events.
 The steps to build and deploy your Event Library are:
 
 1. Complete the stub functions in Event.cpp.
@@ -29,8 +29,8 @@ Software packages:
 
 How to complete the Event.cpp stub functions:
 
-- setEventReceiveCallback() // Set the callback function from the AnyConnect smarter camera platform library to receive events from the camera's event library.
-- eventReceiveThread() // Read data from the camera’s event library and writes it to the callback function.
+- setEventReceiveCallback() // Set the callback function from the AnyConnect Smarter Camera Platform library to receive events from the camera's sensors.
+- eventReceiveThread() // Receive events from the camera's sensors and write them to the callback function.
 
 
 How to compile your Event Library.
