@@ -35,10 +35,15 @@ void Event::eventReceiveThread()
   // and write the data to the callback.
   //
   // For example:
-  // std::string source = "ADAS";
-  // std::string data = "Zebra crossing 2 meter way";
-  // int length = data.length();
-  // this->handler(source, data, length);
+  // EventSource source = EventSource::GPS;
+  // std::string timestamp = "1560167845";
+  // std::string data = "{\"latitude\": \"1.3521 N\", \"longitude\": \"103.8198 E\"}";
+  // std::string description = "Singapore, Asia";
+  // unsigned char* snapshot = (unsigned char*) malloc(yourSnapshotSize);
+  // int length = yourSnapshotSize;
+  // memcpy(snapshot, *yourSnapshotPointer, length);
+  // this->handler(source, timestamp, data, description, snapshot, length);
+  
   });
 }
 

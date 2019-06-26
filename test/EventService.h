@@ -9,13 +9,28 @@ namespace anyconnect {
 namespace event {
 
 ///
+/// \brief Event source.
+///
+/// Supported event sources: GPS, accelerometer and gyrometer.
+///
+enum  class EventSource { 
+  GPS,
+  ACCELEROMETER,
+  GYROMETER
+};
+
+
+///
 /// Handler for received event.
 ///
-/// \param[out] source - source of the event.
-/// \param[out] data - event data.
-/// \param[out] length - Length of the event data.
+/// \param[out] source - source of the event as enum.
+/// \param[out] data - event data in json format. (e.g., {\"latitude\": \"1.3521 N\", \"longitude\": \"103.8198 E\"} )
+/// \param[out] timestamp - time of the event in seconds (epoch unix time: 1560167845 [Monday, June 10, 2019 5:57:25 PM GMT+06:00]).
+/// \param[out] description - description of the event.
+/// \param[out] snapshot - pointer to snapshot data.
+/// \param[out] length - length of the snapshot data.
 ///
-typedef std::function<void(std::string &source, std::string &data, int &length)> EventReceiveHandler;
+typedef std::function<void(EventSource &source, std::string &timestamp, std::string &data, std::string &description, unsigned char* snapshot, int &length)> EventReceiveHandler;
 
 class EventService{
 public:

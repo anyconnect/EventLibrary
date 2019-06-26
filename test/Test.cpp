@@ -40,8 +40,10 @@ bool Test::isLoaded()
 
 void Test::setEventCallback() 
 {
-  instance->setEventReceiveCallback([this](std::string source, std::string data, int len) {
-    std::cout<<"Received: "<<source<<" data: "<<data<<std::endl;
+  instance->setEventReceiveCallback([this](EventSource &source, std::string &timestamp, std::string &data, std::string &description, unsigned char* snapshot, int &length) {
+    if(source == EventSource::GPS) {
+      std::cout<<"Event received from GPS tracker at: "<< timestamp <<" data: "<<data<<" description: "<<description<<" snapshotdata: "<<snapshot<<" length: "<<length<<std::endl;
+    }
   });
 }
 
