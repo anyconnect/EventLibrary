@@ -1,4 +1,4 @@
-The AnyConnect Event Library creates a junction between AnyConnect's Smarter Camera Platform Libraries and your smarter camera’s sensor events.
+The AnyConnect Event Plugin Library creates a junction between AnyConnect's Smarter Camera Platform Libraries and your smarter camera’s sensor events.
 The steps to build and deploy your Event Library are:
 
 1. Complete the stub functions in Event.cpp.
