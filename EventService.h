@@ -25,8 +25,8 @@ enum  class EventSource {
 /// Handler for received event.
 ///
 /// \param[out] source - source of the event as enum.
-/// \param[out] data - event data in json format. (e.g., {\"latitude\": \"1.3521 N\", \"longitude\": \"103.8198 E\"} )
 /// \param[out] timestamp - time of the event in seconds (epoch unix time: 1560167845 [Monday, June 10, 2019 5:57:25 PM GMT+06:00]).
+/// \param[out] data - event data in json format. (e.g., {\"latitude\": \"1.3521 N\", \"longitude\": \"103.8198 E\"} )
 /// \param[out] description - description of the event.
 /// \param[out] snapshot - pointer to snapshot data.
 /// \param[out] length - length of the snapshot data.
