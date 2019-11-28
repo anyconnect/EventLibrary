@@ -11,13 +11,18 @@ namespace event {
 ///
 /// \brief Event source.
 ///
-/// Supported event sources: accelerometer, GPS, gyrometer, and mixed.
+/// Supported event sources: accelerometer, GPS, gyrometer, humidity, 
+/// mixed, pressure, temperature, and wind direction.
 ///
 enum  class EventSource { 
   ACCELEROMETER,
   GPS,
   GYROMETER,
-  MIXED
+  HUMIDITY,
+  MIXED,
+  PRESSURE,
+  TEMPERATURE,
+  WINDDIRECTION
 };
 
 
